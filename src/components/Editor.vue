@@ -1,7 +1,7 @@
 <template>
-  <v-row class="mb-6" no-gutters>
+  <v-row class="mb-6 my-5" no-gutters style="height: 95%;">
       <v-col cols="12" md="9" sm="12">
-          <v-sheet class="pa-2 ma-2 fill-height">
+          <v-sheet class="pa-2 ma-2 fill-height bg-deep-orange-lighten-5">
               <div class="wrap-content" :style="stylesForContent">
                   <div class="content" v-html="content"></div>
               </div>
@@ -18,7 +18,7 @@
       </v-col>
 
       <v-col cols="12" md="3" sm="12" class="order-first order-lg-last order-md-last">
-          <v-sheet class="pa-2 ma-2">
+          <v-sheet class="pa-2 ma-2 bg-deep-orange-lighten-5">
               <CurrentMode :currentMode="currentMode" @updateCurrentMode="updateCurrentMode" />
               <ModeForSelection :modeForSelection="modeForSelection" @updateModeForSelection="updateModeForSelection" />
           </v-sheet>

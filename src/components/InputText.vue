@@ -4,7 +4,7 @@
     <v-btn @click="addText"> Add text </v-btn>
   </div>
   <v-container
-    class="fill-height bg-surface-variant"
+    class="fill-height"
     v-if="HTMLContent"
     style="align-items: flex-start; margin-bottom: 20px; margin-top: -20px;">
     <Editor :HTMLContent="HTMLContent" />
