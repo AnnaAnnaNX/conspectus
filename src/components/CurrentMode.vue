@@ -4,7 +4,7 @@
     <v-slider
       style="margin-left: -123px;"
       direction="vertical"
-      :max="3"
+      :max="2"
       :model-value="nameByMode[currentMode]"
       :ticks="listOfModesObj"
       show-ticks="always"
@@ -34,7 +34,9 @@ function updateCurrentMode(value: number) {
 }
 
 // inverse ticks
-const listOfModesObj = ref<{[key: string]: string}>({ '0': "main", '1': "interesting", '2': "off-topic", '3': "all" })
-const nameByMode = ref<{[key: string]: number}>({ 'main': 0, 'interesting': 1, 'off-topic': 2, 'all': 3 })
+// const listOfModesObj = ref<{[key: string]: string}>({ '3': "main", '2': "interesting", '1': "off-topic", '0': "all" })
+// const nameByMode = ref<{[key: string]: number}>({ 'main': 3, 'interesting': 2, 'off-topic': 1, 'all': 0 })
+const listOfModesObj = ref<{[key: string]: string}>({ '2': "main", '1': "interesting", '0': "all" })
+const nameByMode = ref<{[key: string]: number}>({ 'main': 2, 'interesting': 1, 'all': 0 })
 
 </script>

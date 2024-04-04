@@ -29,7 +29,8 @@ function updateModeForSelection(value: string | number | null) {
     emit('updateModeForSelection', value)
 }
 
-const listOfModes = ref<string[]>(["main", "interesting", "off-topic", "all"].filter(el => (el !== 'all')))
+// const listOfModes = ref<string[]>(["main", "interesting", "off-topic", "all"].filter(el => (el !== 'all')))
+const listOfModes = ref<string[]>(["main", "interesting", "all"].filter(el => (el !== 'all')))
 const nameByMode = ref<{[key: string]: number}>({ 'main': 0, 'interesting': 1, 'off-topic': 2, 'all': 3 })
 
 </script>

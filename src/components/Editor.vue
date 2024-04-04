@@ -20,7 +20,7 @@
       <v-col cols="12" md="3" sm="12" class="order-first order-lg-last order-md-last">
           <v-sheet class="pa-2 ma-2 bg-deep-orange-lighten-5">
               <CurrentMode :currentMode="currentMode" @updateCurrentMode="updateCurrentMode" />
-              <ModeForSelection :modeForSelection="modeForSelection" @updateModeForSelection="updateModeForSelection" />
+              <ModeForSelection :modeForSelection="modeForSelection" @updateModeForSelection="updateModeForSelection" v-show="false" />
           </v-sheet>
       </v-col>
   </v-row>
