@@ -1,0 +1,6 @@
+<div class="content">
+        <div>
+          <span class="all">one two </span>
+          <span class="new">three for five </span><span class="main">six seven</span>
+        </div>
+      </div>

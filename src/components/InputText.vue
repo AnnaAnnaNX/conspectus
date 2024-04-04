@@ -16,8 +16,8 @@ import { ref } from "vue";
 import {parseText} from "@/utils/parseText";
 
 const customText = ref("");
-// let HTMLContent = ref("");
-let HTMLContent = ref('<div class="content"><div><span class="all">one two</span></div>\n<div><span class="all">three</span></div></div>');
+let HTMLContent = ref("");
+// let HTMLContent = ref('<div class="content"><div><span class="all">one two</span></div>\n<div><span class="all">three</span></div></div>');
 
 const addText = () => {
   HTMLContent.value = parseText(customText.value)

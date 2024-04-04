@@ -28,6 +28,9 @@ export default defineConfig({
     }),,
     viteSingleFile({ removeViteModuleLoader: true })
   ],
+  test: {
+    environment: 'happy-dom'
+  },
   define: { 'process.env': {} },
   resolve: {
     alias: {
