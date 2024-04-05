@@ -21,6 +21,9 @@
           <v-sheet class="pa-2 ma-2 bg-deep-orange-lighten-5">
               <CurrentMode :currentMode="currentMode" @updateCurrentMode="updateCurrentMode" />
               <ModeForSelection :modeForSelection="modeForSelection" @updateModeForSelection="updateModeForSelection" />
+              <div style="text-align: center;">
+                <v-btn class="mb-5" @click="downloadConspectus">Download</v-btn>
+              </div>
           </v-sheet>
       </v-col>
   </v-row>
@@ -32,6 +35,7 @@ import { ref, computed } from "vue";
 import { selectDivs } from "@/tests/selection/selection";
 import { checkExistenceSpanElement } from "@/tests/selection/utils";
 import { useSelectMode } from "@/composibles/useSelectMode";
+import template from '/public/template.html?raw'
 
 const props = defineProps(["HTMLContent"]);
 
@@ -119,6 +123,23 @@ const stylesForContent = computed(() => {
       .join("\n");
   }
 });
+
+const downloadConspectus = () => {
+  const text = '<div class="content"><div><span class="all">one two</span></div>\n' +
+    '<div><span class="all">three</span></div></div>'
+  const file = template.replace(text, content.value)
+
+  const element = document.createElement('a');
+  element.setAttribute('href', 'data:text/html;charset=utf-8,' + encodeURIComponent(file));
+  element.setAttribute('download', 'conspectus');
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
 </script>
 
 <style>
