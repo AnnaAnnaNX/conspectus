@@ -25,8 +25,7 @@ defineProps<{
 const emit = defineEmits(['updateModeForSelection'])
 
 function updateModeForSelection(value: string | number | null) {
-  console.log('updateModeForSelection', value)
-    emit('updateModeForSelection', value)
+  emit('updateModeForSelection', value)
 }
 
 // const listOfModes = ref<string[]>(["main", "interesting", "off-topic", "all"].filter(el => (el !== 'all')))
